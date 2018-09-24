@@ -1,27 +1,27 @@
-# Github
+## GithubSearch Aplication
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+This is a project that deals on working on the git hub API search application.
+It works with the client_secret and the client_id that are used to get observable that are used to get data,
 
-## Development server
+##Description
+This project deals with searching of repositories of users on git hub and there number of repositories that they have,
+A user is required to input their name in the search bar and the application is able to retrieve their details of their repositories,
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+##Built With
+It is build with atom.
+The framework used is Angular,
+##Versioning
+We use SemVer for versioning. For the versions available, see the tags on this repository.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##Authors
+Ratemo Lewis- Initial work - Ratemo
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+##License
+This project is licensed under the MIT License
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Acknowledgments
+Hat tip to anyone whose code was used
+Inspiration
+Moringa T.Ms
