@@ -16,6 +16,7 @@ username:string;
     searchUser(){
       return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + environment.clientID + "&client_secret=" + environment.clientSecret).map(res=>
       res.json());
+      
     }
 
     getRepos(){
