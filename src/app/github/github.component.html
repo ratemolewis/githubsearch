@@ -1,0 +1,80 @@
+<!-- <div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-12">
+       Enter User Name:&nbsp;<input type="text" [(ngModel)]="username">&nbsp;
+    <button (click)="searchUser()" >Search</button>
+    <div *ngIf="response" >
+        <p><img src="{{response.avatar_url}}" alt=""></p>
+        <p>{{response.name}}</p>
+        <p>{{response.public_repos}}</p>
+        <p>{{response.organizations_url}}</p>
+        <p>NUmber of followers{{response.followers}}</p>
+
+      </div>
+    </div>
+  </div>
+
+  </div> -->
+  <form class="" action=""  >
+    <div class="form-group">
+      <input type="text" placeholder="Serach user" (keyup)="serachUser()" [(ngModel)]="username" class="form-control"name="username" value="">
+    </div>
+  </form>
+<div  *ngIf="userprofile">
+      <!-- <div class="panel panel-default">
+        <div class="panel-heading">
+          {{userprofile.name}} <small>{{userprofile.login}}</small>
+          ,<span *ngIf="userprofile.created_at">Created at {{userprofile.created_at}}</span>
+          <span *ngIf="userprofile.company">Work place:{{userprofile.company}}</span>
+        </div>
+      </div> -->
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="card bg-light text-dark">
+            <div class="card-body">
+              <p>
+                <span class="label label-primary">Public gist:{{userprofile.public_gist}}</span>
+                <span class="label label-default">Following:{{userprofile.following}}</span>
+                <span class="label label-success">Number of Followers:{{userprofile.followers}}</span>
+                <span class="label label-info">Public Repos:{{userprofile.public_repos}}</span>
+              </p>
+              <p><a href="{{userprofile.html_url}}" target="_blank " class="btn btn-primary">View profile on github</a></p>
+
+              <div class="panel panel-default">
+                <div class="panel panel-heading">
+                  <h3 class="panel-title" >Repositories</h3>
+                </div>
+                <div class="pane-body" *ngFor="let repo of repositories; let i=index">
+                  <p class="clearfix" id="i" appUnderline>
+                   {{repo.name | uppercase}} <a href="{{repo.html_url}}"  target="_blank" class="btn btn-sm btn-secondary pull-right">Preview site on github</a>
+                  </p>
+                  <p>{{repo.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+          <div class="col-md-4">
+            <ul class="list-group">
+              <li class="list-group-item" *ngIf="userprofile.bio">{{userprofile.bio}}</li>
+              <li class="list-group-item" *ngIf="userprofile.blog">  <a href="{{userprofile.blog }}"></a>{{userprofile.blog }}</li>
+              <li class="list-group-item" *ngIf="userprofile.email"><a href="{{userprofile.email}}"></a>  {{userprofile.email}}</li>
+
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-info text-white">
+           <div class="card-body">
+             <img src="{{userprofile.avatar_url}}" class="img-responsive" class="img-circle" alt="Responsive image">
+           </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+</div>
